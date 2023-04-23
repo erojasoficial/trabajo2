@@ -1223,13 +1223,9 @@ aside {
     
     <h4 class="mt-4 mb-4">En qué puedo ayudarte?</h4>
     <main id="messageBody" class="w-full bg-whatsapp relative overflow-y-auto">
-      <div class="main-messages block px-4 py-3">
+      <div id="conversation" class="main-messages block px-4 py-3">
         <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊 <span class="text-xs inline-block">13:00 <img src="https://www.flaticon.com/svg/vstatic/svg/60/60727.svg?token=exp=1611581819~hmac=ebbc941635810f019c46f5b4f9b1ff89" class="w-4 h-4 inline -mt-1 ml-2" alt=""></span></div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
+          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
         </div>
         <div class="flex">
           <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
@@ -1352,16 +1348,8 @@ aside {
         </div>
         <div class="flex justify-end">
           <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
         </div>
         <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
           <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
         </div>
       </div>
@@ -1392,7 +1380,7 @@ aside {
         </div>
       </div>
     </main>
-    <div id="conversation"></div>
+    <div class="conversation"></div>
     <div id="speech" class="p-3 speech">
         <span id="final"></span>
         <span id="interim"></span>
@@ -1452,10 +1440,25 @@ aside {
         }
 
         function addMessage(role, content) {
-            const messageElement = document.createElement('div');
-            messageElement.classList.add('speech');
-            messageElement.classList.add(role);
-            messageElement.textContent = content;
+            // const messageElement = document.createElement('div');
+            // messageElement.classList.add('speech');
+            // messageElement.classList.add(role);
+            // messageElement.textContent = content;
+            var messageElement = "";
+            if (role === 'assistant') {
+              messageElement = ' <div class="flex">'+
+          '<div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2"><b>Yanapaq: </b>'
+            +content+
+            '</div>'+
+        '</div>';
+            }else{
+              messageElement = '<div class="flex justify-end">'+
+          '<div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2"><b>Yo: </b>'+
+            content+
+            '</div>'+
+        '</div>';
+            }
+            
             messages.appendChild(messageElement);
             messages.scrollTop = messages.scrollHeight;
 
