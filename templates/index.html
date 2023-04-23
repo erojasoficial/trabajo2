@@ -1459,12 +1459,12 @@ aside {
               messageElementChild.classList.add('user');
               messageElementChild.classList.add('text-gray-200');
               messageElementChild.classList.add('rounded-tl-lg');
-              user.textContent = "Yo: ";
+              user.textContent = "Yo: " +content;
             }else{
               messageElementChild.classList.add('user');
               messageElementChild.classList.add('text-gray-200');
               messageElementChild.classList.add('rounded-tr-lg');
-              user.textContent = "Yanapaq: ";
+              user.textContent = "Yanapaq: "+content;
             }
             messageElementChild.appendChild(user);
             messageElement.appendChild(messageElementChild);
