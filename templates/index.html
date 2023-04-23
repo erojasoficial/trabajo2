@@ -22,6 +22,7 @@
       margin: 0 auto;
       max-height: 300px;
     overflow: auto;
+    border: 10px solid #1e2428;
     }
 
     .conversation {
@@ -1368,7 +1369,7 @@
     }
 
     .single-message {
-      background-color: #056162;
+      background-color: #2f5190;
     }
 
     .single-message.user {
@@ -1387,15 +1388,6 @@
     .message-input {
       background-color: #33383b;
     }
-
-    .bg-whatsapp {
-      background-color: #0d1418;
-      background-image: url(https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png);
-      background-size: inherit;
-      background-position: top;
-      background-repeat: repeat;
-    }
-
     /* .main-messages {
       background: #0e1921f0;
     } */
@@ -1483,10 +1475,10 @@
       </div>
 
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 mt-5">
 
 
-      <h4 class="mt-4 mb-4">En qué puedo ayudarte?</h4>
+      <!-- <h4 class="mt-4 mb-4">En qué puedo ayudarte?</h4> -->
       <main id="messageBody" class="w-full bg-whatsapp relative overflow-y-auto">
         <div id="conversation" class="main-messages block px-4 py-3">
           <!-- <div class="flex justify-end">
@@ -1677,7 +1669,7 @@
     const synth = window.speechSynthesis;
     const recognition = new webkitSpeechRecognition();
     recognition.lang = 'es-MX';
-    const voiceInputBtn = document.getElementById('start');
+    var voiceInputBtn = document.getElementById('start');
 
     voiceInputBtn.addEventListener('click', () => {
       recognition.start();
@@ -1693,13 +1685,14 @@
       console.error(event.error);
     }
 
-    // recognition.onend = () => {
-    //   voiceInputBtn.textContent = 'Hablar';
-    // }
+    recognition.onend = () => {
+      voiceInputBtn.style.color="#9ca3af";//textContent = 'Hablar';
+    }
 
-    // recognition.onstart = () => {
-    //   voiceInputBtn.textContent = 'Escuchando...';
-    // }
+    recognition.onstart = () => {
+      voiceInputBtn.style.color="#2f5190";
+      // voiceInputBtn.textContent = 'Escuchando...';
+    }
 
     function addMessage(role, content) {
       const messageElement = document.createElement('div');
