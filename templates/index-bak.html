@@ -7,7 +7,6 @@
     <title>Chat con Asistente Virtual</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
     <style>
         .speech {
   border: 1px solid gray; height: auto; border-radius: 8px;width: 500px;
@@ -628,10 +627,8 @@ a {
 
 .husky {
   animation: squiggly-anim 0.3s infinite;
-  height: 48vmin;
-    width: 67vmin;
-    margin: 0 auto;
-    margin-top: 3rem;
+  height: 60vmin;
+  width: 84vmin;
 }
 @media screen and (max-width: 400px) {
   .husky {
@@ -860,7 +857,7 @@ div:before, div:after {
   position: absolute;
   height: 100%;
   width: 44%;
-  background: #fb6768;
+  background: #DE6465;
   left: 25%;
   bottom: 100%;
   z-index: 1;
@@ -1073,107 +1070,12 @@ html, body {
   box-sizing: border-box;
   position: relative;
 }
-
-
-
-
-
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #131c21;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #394045;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-aside {
-  width: 40rem;
-}
-.green-text {
-  color: #00a884;
-}
-.green-bg {
-  color: #00a884;
-}
-.green-border {
-  border-color: #00a884;
-}
-.main-header,
-.aside-header {
-  background-color: #2a2f32;
-}
-.main-footer {
-  background-color: #1e2428;
-}
-.search-bar,
-.message, .aside-messages {
-  background-color: #131c21;
-}
-.search-bar input,
-.message-active {
-  background-color: #323739;
-}
-.single-message {
-  background-color: #262d31;
-}
-.single-message.user {
-  background-color: #056162;
-}
-.incoming-svg {
-  color: #262d31;
-  transform: scaleX(-1);
-}
-.user-svg {
-  color: #056162;
-}
-.message-input {
-  background-color: #33383b;
-}
-.bg-whatsapp {
-  background-color: #0d1418;
-  background-image: url(https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png);
-  background-size: inherit;
-  background-position: top;
-  background-repeat: repeat;
-}
-.main-messages {
-  background: #0e1921f0;
-}
     </style>
 </head>
-<body class="container pt-5 text-center">
+<bodyclass="container pt-5 text-center">
    
   <div class="text-center w-100 row">
-    <div class="col-sm-12">
-      <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 111.3 24.7" style="enable-background:new 0 0 111.3 24.7;" xml:space="preserve">
-        <style type="text/css">
-          .st0{fill:#2F5190;}
-        </style>
-        <g>
-          <path class="st0" d="M6.9,3.1c1.6,2,3.2,3.7,4.7,5.1c1.1-1.4,2.4-3.2,3.9-5.4c2,1.3,3.6,2.6,4.8,3.9c-2.5,3.8-7.1,9.8-13.7,17.8   c-1.5-0.8-2.9-2-4.2-3.5c2.2-3,3.1-4.4,2.9-4.1s0.9-1.2,3.2-4.5c-1.1-0.9-3.1-2.9-5.8-5.8L6.9,3.1z"/>
-          <path class="st0" d="M28.9,4.2l0.3,1.5L32.1,21c-0.7,0.4-2.1,0.6-4.1,0.7c-0.4-1.9-0.6-3-0.7-3.1l-0.2-0.8c-0.4-0.1-1.2-0.1-2.4,0   c-0.5,1.8-0.8,3.1-1,3.9c-1.4,0.4-3,0.2-4.6-0.5c1.2-4,1.9-6.3,2.1-6.9s0.7-2.2,1.4-4.8l1.2-4.2C24.9,4.4,26.7,4.1,28.9,4.2z    M26,10.9c-0.3,1.6-0.6,2.9-0.8,3.8c0.5,0,1,0,1.6,0C26.6,13.3,26.3,12,26,10.9z"/>
-          <path class="st0" d="M49.9,3.8c-0.1,0.7-0.2,1.7-0.3,2.9L48,21.6c-1,0.4-2.1,0.8-3.5,1c-1-2.6-2.4-5.9-4.3-9.8L40,15.6l-0.4,5.4   c-1.4,0.4-3,0.7-4.6,0.8c0.4-3.4,0.6-6,0.7-7.7c0.1-1.6,0.3-4.8,0.7-9.5l4.3-0.4c0.8,1.8,1.5,3.3,2.2,4.6s1.2,2.2,1.5,2.7   c0.2-1.7,0.5-4,0.8-6.9C47,4.2,48.6,4,49.9,3.8z"/>
-          <path class="st0" d="M61.1,3.1l0.3,1.7L64.7,22c-0.8,0.5-2.4,0.7-4.6,0.8c-0.5-2.2-0.7-3.3-0.8-3.5l-0.2-0.9   c-0.5-0.1-1.4-0.1-2.7,0c-0.5,2-0.9,3.4-1.1,4.4c-1.6,0.4-3.4,0.2-5.2-0.6c1.3-4.5,2.1-7,2.3-7.7s0.8-2.5,1.5-5.4l1.3-4.8   C56.6,3.3,58.6,2.9,61.1,3.1z M57.8,10.6c-0.4,1.8-0.7,3.3-0.9,4.3c0.5,0,1.2,0,1.8,0C58.5,13.2,58.2,11.8,57.8,10.6z"/>
-          <path class="st0" d="M79.6,8.5c0,3.9-1.7,6.2-5.3,7.1c-1.3,0.3-2.1,0.4-2.5,0.5c0,1.8,0,4.1,0.2,6.6c-1.9,0.6-3.7,1-5.5,1.2   c0.1-6.4,0.2-11.6,0.3-15.6c0-2.3,0-3.6,0.1-3.9c1.9-1,4.7-1.3,8.3-1.1C77.8,3.8,79.2,5.6,79.6,8.5z M71.7,12.2   c2.4-0.4,3.6-1.2,3.8-2.4c0-0.9-0.3-1.5-0.8-1.8c-1-0.5-2-0.5-2.9-0.1C71.7,9.3,71.6,10.8,71.7,12.2z"/>
-          <path class="st0" d="M89.1,4.2l0.3,1.5L92.3,21c-0.7,0.4-2.1,0.6-4.1,0.7c-0.4-1.9-0.6-3-0.7-3.1l-0.2-0.8c-0.4-0.1-1.2-0.1-2.4,0   c-0.5,1.8-0.8,3.1-1,3.9c-1.4,0.4-3,0.2-4.6-0.5c1.2-4,1.9-6.3,2.1-6.9S82,12,82.7,9.4l1.2-4.2C85.2,4.4,86.9,4.1,89.1,4.2z    M86.2,10.9c-0.3,1.6-0.6,2.9-0.8,3.8c0.5,0,1,0,1.6,0C86.8,13.3,86.5,12,86.2,10.9z"/>
-          <path class="st0" d="M108.3,7.1c0.4,0.7,0.6,1.3,0.8,1.7c0.2,0.3,0.3,1,0.5,2.2c0.1,3.5-0.8,6-2.6,7.5c0.9,1.2,1.4,1.9,1.6,2.1   c-0.6,0.7-1.8,1.5-3.8,2.3c-0.3-0.5-0.6-1.3-1-2.4c-1.2,0.6-2.5,0.8-3.9,0.5c-1.4-0.3-2.9-1.3-4.6-3.1c-1.2-1.6-1.9-3.2-1.9-4.8   c-0.1-1.4,0.2-2.8,0.8-4.3l0.3-0.6c0.2-0.4,0.8-1.2,1.7-2.2c1.4-1.3,2.6-2.1,3.8-2.3C103.5,3.1,106.2,4.3,108.3,7.1z M98.4,13.7   c0.2,1.4,1,2.2,2.2,2.5c1.5,0.3,2.7-0.1,3.4-1.3c0.4-0.8,0.5-2,0.4-3.4c-0.4-1.3-1-2.1-1.8-2.5c-1.9-0.4-3.2,0.3-3.9,2   C98.4,12,98.3,12.8,98.4,13.7z"/>
-        </g>
-        </svg>
-      </div>
-    </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="husky">
         <div class="mane">
           <div class="coat"></div>
@@ -1218,180 +1120,10 @@ aside {
       </div>
       
     </div>
-   <div class="col-sm-6">
+   <div class="col-sm-8">
       
-    
+    <h2>YANAPAQ</h2>
     <h4 class="mt-4 mb-4">En qué puedo ayudarte?</h4>
-    <main id="messageBody" class="w-full bg-whatsapp relative overflow-y-auto">
-      <div class="main-messages block px-4 py-3">
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊 <span class="text-xs inline-block">13:00 <img src="https://www.flaticon.com/svg/vstatic/svg/60/60727.svg?token=exp=1611581819~hmac=ebbc941635810f019c46f5b4f9b1ff89" class="w-4 h-4 inline -mt-1 ml-2" alt=""></span></div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-        <div class="flex justify-end">
-          <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
-          <span><svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-        </div>
-        <div class="flex">
-          <span><svg class="incoming-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="8" height="13">
-              <path opacity=".13" d="M5.188 1H0v11.193l6.467-8.625C7.526 2.156 6.958 1 5.188 1z"></path>
-              <path fill="currentColor" d="M5.188 0H0v11.193l6.467-8.625C7.526 1.156 6.958 0 5.188 0z"></path>
-            </svg></span>
-          <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
-      </div>
-      <div class="main-footer sticky bottom-0 right-0 left-0 text-gray-400">
-        <div class="flex items-center px-4 py-1">
-          <div class="flex-none">
-            <svg class="inline w-6 h-6 -mt-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <svg class="inline w-6 h-6 ml-2 -mt-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path>
-            </svg>
-          </div>
-          <div class="flex-grow">
-            <div class="px-4 py-2 w-full">
-              <form method="GET">
-                <div class="relative text-gray-600 focus-within:text-gray-200">
-                  <input type="search" name="q" class="message-input w-full py-3 text-sm text-white bg-gray-700 rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Type a message" autocomplete="off">
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="flex-none text-right">
-            <svg class="inline w-6 h-6 -mt-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </main>
     <div id="conversation"></div>
     <div id="speech" class="p-3 speech">
         <span id="final"></span>
@@ -1400,7 +1132,7 @@ aside {
    
       <div class="audio-controls">
         <button class="btn btn-success" id="start">Quiero hablar</button>
-        <button class="btn btn-danger" style="display: none;" id="stop">Enviar el mensaje</button>
+        <button class="btn btn-danger" id="stop">Enviar el mensaje</button>
         <!-- <audio id="audio" controls></audio> -->
       </div>
     
