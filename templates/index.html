@@ -1150,6 +1150,9 @@ aside {
 .main-messages {
   background: #0e1921f0;
 }
+.logo{
+  width: 50%;
+}
     </style>
 </head>
 <body class="container pt-5 text-center">
@@ -1224,7 +1227,7 @@ aside {
     <h4 class="mt-4 mb-4">En qué puedo ayudarte?</h4>
     <main id="messageBody" class="w-full bg-whatsapp relative overflow-y-auto">
       <div id="conversation" class="main-messages block px-4 py-3">
-        <div class="flex justify-end">
+        <!-- <div class="flex justify-end">
           <div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2">Hey! Thought I'd reach out to say how are you? 😊</div>
         </div>
         <div class="flex">
@@ -1351,7 +1354,7 @@ aside {
         </div>
         <div class="flex">
           <div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2">Hey Pal! I'm doing good, how have you been? Cold at the moment aye!</div>
-        </div>
+        </div> -->
       </div>
       <div class="main-footer sticky bottom-0 right-0 left-0 text-gray-400">
         <div class="flex items-center px-4 py-1">
@@ -1440,24 +1443,47 @@ aside {
         }
 
         function addMessage(role, content) {
-            // const messageElement = document.createElement('div');
-            // messageElement.classList.add('speech');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('flex');
+            const messageElementChild = document.createElement('div');
+            messageElementChild.classList.add('single-message');
+            messageElementChild.classList.add('rounded-br-lg');
+            messageElementChild.classList.add('mb-4');
+            messageElementChild.classList.add('px-4');
+            messageElementChild.classList.add('py-2');
+            messageElementChild.classList.add('rounded-bl-lg');
+
+            const user = document.createElement('b');
+            if (role != 'assistant') {
+              messageElement.classList.add('justify-end');
+              messageElementChild.classList.add('user');
+              messageElementChild.classList.add('text-gray-200');
+              messageElementChild.classList.add('rounded-tl-lg');
+              user.textContent = "Yo: ";
+            }else{
+              messageElementChild.classList.add('user');
+              messageElementChild.classList.add('text-gray-200');
+              messageElementChild.classList.add('rounded-tr-lg');
+              user.textContent = "Yanapaq: ";
+            }
+            messageElementChild.appendChild(user);
+            messageElement.appendChild(messageElementChild);
             // messageElement.classList.add(role);
             // messageElement.textContent = content;
-            var messageElement = "";
-            if (role === 'assistant') {
-              messageElement = ' <div class="flex">'+
-          '<div class="single-message rounded-tr-lg text-gray-200 rounded-bl-lg rounded-br-lg mb-4 px-4 py-2"><b>Yanapaq: </b>'
-            +content+
-            '</div>'+
-        '</div>';
-            }else{
-              messageElement = '<div class="flex justify-end">'+
-          '<div class="single-message rounded-tl-lg rounded-bl-lg text-gray-200 rounded-br-lg user mb-4 px-4 py-2"><b>Yo: </b>'+
-            content+
-            '</div>'+
-        '</div>';
-            }
+        //     var messageElement = "";
+        //     if (role === 'assistant') {
+        //       messageElement = ' <div class="flex">'+
+        //   '<div class=" rounded-tr-lg text-gray-200 rounded-bl-lg"><b>Yanapaq: </b>'
+        //     +content+
+        //     '</div>'+
+        // '</div>';
+        //     }else{
+        //       messageElement = '<div class="flex justify-end">'+
+        //   '<div class=" rounded-tl-lg rounded-bl-lg text-gray-200 user"><b>Yo: </b>'+
+        //     content+
+        //     '</div>'+
+        // '</div>';
+        //     }
             
             messages.appendChild(messageElement);
             messages.scrollTop = messages.scrollHeight;
