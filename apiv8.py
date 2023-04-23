@@ -5,7 +5,7 @@ import requests
 import json
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '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'
+app.config['SECRET_KEY'] = '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'
 socketio = SocketIO(app, cors_allowed_origins='*')
 CORS(app)
 
@@ -18,7 +18,7 @@ def get_gpt_response(message):
 
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer " + "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"
+        "Authorization": "Bearer " + "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"
     }
 
     data = {
